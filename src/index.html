@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocuDoro</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-800 h-full flex items-center justify-center"
+  >
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg text-center">
+      <h1 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+        FocuDoro
+      </h1>
+      <div>
+        <label
+          for="focusTime"
+          class="block mb-2 text-gray-900 dark:text-gray-100"
+          >Tiempo de enfoque (minutos):</label
+        >
+        <input
+          id="focusTime"
+          type="number"
+          class="mb-4 p-2 border rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+          value="25"
+          min="1"
+          aria-label="Tiempo de enfoque en minutos"
+        />
+      </div>
+      <div>
+        <label
+          for="breakTime"
+          class="block mb-2 text-gray-900 dark:text-gray-100"
+          >Tiempo de descanso (minutos):</label
+        >
+        <input
+          id="breakTime"
+          type="number"
+          class="mb-4 p-2 border rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+          value="5"
+          min="1"
+          aria-label="Tiempo de descanso en minutos"
+        />
+      </div>
+      <div
+        id="timeFocus"
+        class="text-xl font-mono font-bold mb-4 hidden text-gray-900 dark:text-gray-100"
+      >
+        Tiempo de enfoque
+      </div>
+      <div
+        id="timeRest"
+        class="text-xl font-mono font-bold mb-4 hidden text-gray-900 dark:text-gray-100"
+      >
+        Tiempo de descanso
+      </div>
+      <div
+        id="timePreparation"
+        class="text-xl font-mono font-bold mb-4 hidden text-gray-900 dark:text-gray-100"
+      >
+        Tiempo de preparación
+      </div>
+      <div
+        id="timerDisplay"
+        class="text-4xl font-mono mb-4 text-gray-900 dark:text-gray-100"
+      >
+        25:00
+      </div>
+      <div class="flex justify-center space-x-4 mb-4">
+        <button
+          id="startButton"
+          class="bg-blue-500 text-white px-4 py-2 rounded transition-transform duration-300 transform hover:scale-110 focus:outline-none"
+        >
+          <img
+            src="./assets/icons/start-icon.svg"
+            alt="Iniciar"
+            class="inline-block w-5 h-5 mr-2"
+          />
+          Iniciar
+        </button>
+        <button
+          id="pauseButton"
+          class="bg-yellow-500 text-white px-4 py-2 rounded transition-transform duration-300 transform hover:scale-110 focus:outline-none"
+          disabled
+        >
+          <img
+            src="./assets/icons/pause-icon.svg"
+            alt="Pausar"
+            class="inline-block w-5 h-5 mr-2"
+          />
+          Pausar
+        </button>
+        <button
+          id="resetButton"
+          class="bg-red-500 text-white px-4 py-2 rounded transition-transform duration-300 transform hover:scale-110 focus:outline-none"
+          disabled
+        >
+          <img
+            src="./assets/icons/reset-icon.svg"
+            alt="Reiniciar"
+            class="inline-block w-5 h-5 mr-2"
+          />
+          Reiniciar
+        </button>
+      </div>
+      <div class="mt-6">
+        <label
+          id="toggleTheme"
+          class="relative inline-block h-8 w-14 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-900"
+        >
+          <input class="peer sr-only" id="AcceptConditions" type="checkbox" />
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+          ></span>
+        </label>
+
+        <div
+          class="ml-3 text-gray-700 dark:text-gray-300 font-medium"
+          id="themeText"
+        >
+          Modo Claro
+        </div>
+      </div>
+    </div>
+
+    <script src="./javaScript.js"></script>
+  </body>
+</html>
